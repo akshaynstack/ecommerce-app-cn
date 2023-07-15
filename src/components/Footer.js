@@ -7,16 +7,13 @@ const Footer = () => {
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Lorem Ipsum™</a>. All Rights Reserved.</span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <a href="https://github.com/akshaynstack" className="mr-4 hover:underline md:mr-6">Github</a>
+            <a href="https://github.com/akshaynstack" className="-mx-3 mr-2 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white">Github</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/akshaynceo/" className="mr-4 hover:underline md:mr-6">Linkedin</a>
+            <a href="https://www.linkedin.com/in/akshaynceo" className="-mx-3 mr-2 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white">Linkedin</a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">Licensing</a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">Contact</a>
+            <a href="mailto:akshaynceo@gmail.com" className="-mx-3 mr-2 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white">Contact</a>
           </li>
         </ul>
       </div>

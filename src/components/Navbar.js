@@ -48,11 +48,7 @@ export default function Example() {
             Contact
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Add a Product &nbsp; <span aria-hidden="true">&#43;</span>
-          </a>
-        </div>
+        
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
@@ -95,14 +91,6 @@ export default function Example() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
                 >
                   Contact
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50"
-                >
-                  Add a Product <span aria-hidden="true">&#43;</span>
                 </a>
               </div>
             </div>
