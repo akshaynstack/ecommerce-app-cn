@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import Notification from './Notification';
 
 const customModalStyles = {
   overlay: {
@@ -27,7 +26,6 @@ const Products = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [editProduct, setEditProduct] = useState(null);
-  const [showNotification, setShowNotification] = useState(false);
   const [newProduct, setNewProduct] = useState({
     name: '',
     href: '',
@@ -51,16 +49,6 @@ const [isLoading, setIsLoading] = useState(true); // Loading state
       setProducts([]); // Set an empty array as the initial state if no products are found in localStorage
     }
   }, []);
-
-  useEffect(() => {
-    if (showNotification) {
-      const timeout = setTimeout(() => {
-        setShowNotification(false);
-      }, 3000);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [showNotification]);
 
   const fetchData = async () => {
     try {
@@ -136,8 +124,6 @@ const [isLoading, setIsLoading] = useState(true); // Loading state
       if (response.ok) {
         const data = await response.json();
         setProducts((prevProducts) => [...prevProducts, data]);
-        // Product added successfully
-        setShowNotification(true);
         setIsAdding(false);
         resetNewProduct();
   
@@ -196,9 +182,6 @@ const [isLoading, setIsLoading] = useState(true); // Loading state
 
   return (
     <div className="bg-white">
-      {showNotification && (
-        <Notification message="Product Added Successfully" />
-      )}
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <button onClick={handleAdd} type="button" class="text-white bg-blue-900 hover:bg-sky-950 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Add Product
