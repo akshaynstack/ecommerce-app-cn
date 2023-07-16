@@ -107,7 +107,7 @@ export default function ProductItem({ item }) {
             <span>{item.price}</span>
           ) : (
             <input
-              type="text"
+              type="number"
               value={price}
               className="w-50"
               onChange={(e) => setprice(e.target.value)}

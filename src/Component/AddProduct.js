@@ -31,7 +31,7 @@ export default function AddProduct() {
   const [thumbnail, setthumbmail] = useState("");
   const [rating, setrating] = useState("");
 
-  let url = "https://my-json-server.typicode.com/akshaynstack/dummy-ecommerce/db";
+  let url = "https://my-json-server.typicode.com/akshaynstack/dummy-ecommerce/products";
   function handleSubmit(e) {
     e.preventDefault();
     let result = customFetch(url, {
@@ -77,7 +77,7 @@ export default function AddProduct() {
           onChange={(e) => setdescription(e.target.value)}
         />
         <input
-          type="text"
+          type="number"
           className="p-2"
           placeholder="Price"
           onChange={(e) => setprice(e.target.value)}
@@ -95,7 +95,7 @@ export default function AddProduct() {
           onChange={(e) => setthumbmail(e.target.value)}
         />
         <input
-          type="text"
+          type="number"
           className="p-2"
           placeholder="ratings"
           onChange={(e) => setrating(e.target.value)}
@@ -108,7 +108,7 @@ export default function AddProduct() {
             backgroundColor: "var(--nav)",
           }}
         >
-          Add to Cart
+          Add Product
         </button>
       </form>
     </Container>
